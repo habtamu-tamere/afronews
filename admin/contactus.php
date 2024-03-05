@@ -9,7 +9,7 @@ header('location:index.php');
 else{
 if(isset($_POST['update']))
 {
-$pagetype='aboutus';
+$pagetype='contactus';
 $pagetitle=$_POST['pagetitle'];
 $pagedetails=$_POST['pagedescription'];
 
@@ -25,6 +25,7 @@ $error="Something went wrong . Please try again.";
 }
 ?>
 
+            <!-- Top Bar Start -->
            <?php include('includes/topheader.php');?>
             <!-- ========== Left Sidebar Start ========== -->
              <?php include('includes/leftsidebar.php');?>
@@ -42,22 +43,22 @@ $error="Something went wrong . Please try again.";
 
 
                         <div class="row">
-                            <div class="col-xs-12">
-                                <div class="page-title-box">
-                                    <h4 class="page-title">About Page  </h4>
+							<div class="col-xs-12">
+								<div class="page-title-box">
+                                    <h4 class="page-title">Contact us Page  </h4>
                                     <ol class="breadcrumb p-0 m-0">
                                         <li>
                                             <a href="#">Pages</a>
                                         </li>
                                      
                                         <li class="active">
-                                         About us
+                                         Contact us
                                         </li>
                                     </ol>
                                     <div class="clearfix"></div>
                                 </div>
-                            </div>
-                        </div>
+							</div>
+						</div>
                         <!-- end row -->
 
 <div class="row">
@@ -79,7 +80,7 @@ $error="Something went wrong . Please try again.";
 </div>
 </div>
 <?php 
-$pagetype='aboutus';
+$pagetype='contactus';
 $query=mysqli_query($con,"select PageTitle,Description from tblpages where PageName='$pagetype'");
 while($row=mysqli_fetch_array($query))
 {
@@ -128,5 +129,9 @@ while($row=mysqli_fetch_array($query))
                 </div> <!-- content -->
 
            <?php include('includes/footer.php');?>
+<!--  Author Name: habtamu K. 
+ for any PHP, Codeignitor, Laravel OR Python work contact me at habtamu.infospace@gmail.com  
+ Visit website : www.habtamuk.com -->  
 
+           
 <?php } ?>
